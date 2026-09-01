@@ -31,19 +31,19 @@ export default function Hero() {
 
       <div className="relative grid w-full items-center gap-8 lg:min-h-[720px] lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:gap-10">
         <div className="lg-inset-left px-[var(--page-gutter)] pt-12 pb-10 lg:py-16 lg:pr-4">
-          <h1 className="max-w-[17ch] text-[2.4rem] font-semibold leading-[1.14] tracking-[-0.02em] text-ink sm:text-[3rem] lg:text-[3.5rem] xl:text-[3.95rem]">
+          <h1 data-reveal="left" className="max-w-[17ch] text-[2.4rem] font-semibold leading-[1.14] tracking-[-0.02em] text-ink sm:text-[3rem] lg:text-[3.5rem] xl:text-[3.95rem]">
             Building Stronger People.{" "}
             <span className="text-gold">Stronger Businesses.</span>
           </h1>
 
-          <p className="mt-7 max-w-[48ch] text-[16px] leading-[1.85] text-muted">
+          <p data-reveal="left" style={{ transitionDelay: "120ms" }} className="mt-7 max-w-[48ch] text-[16px] leading-[1.85] text-muted">
             <span className="font-semibold text-ink">Aome People&apos;s Solution</span> is a
             people&apos;s-centric Human Resource and people advisory firm offering strategic
             solutions that develop talents, strengthen organizations and drive sustainable
             business growth.
           </p>
 
-          <ContactButton className="mt-9 inline-flex items-center gap-2 rounded-md bg-gold px-7 py-3.5 text-[15px] font-medium text-white transition-colors hover:bg-gold-dark">
+          <ContactButton data-reveal="left" style={{ transitionDelay: "240ms" }} className="mt-9 inline-flex items-center gap-2 rounded-md bg-gold px-7 py-3.5 text-[15px] font-medium text-white transition-colors hover:bg-gold-dark">
             Partner with Us
             <ArrowRightIcon className="h-4 w-4" />
           </ContactButton>

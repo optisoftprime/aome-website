@@ -52,15 +52,15 @@ const details: {
 
 export default function Contact() {
   return (
-    <section id="contact" className="bg-mint py-20 lg:py-24">
+    <section id="contact" className="overflow-hidden bg-mint py-20 lg:py-24">
       <div className="container-page">
-        <div className="text-center">
+        <div data-reveal className="text-center">
           <h2 className="section-title">Contact Us</h2>
           <p className="section-sub mt-2">Let&apos;s Build a Stronger Workforce Together</p>
         </div>
 
         <div className="mt-14 grid items-center gap-12 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1fr)] lg:gap-12">
-          <ul className="min-w-0 space-y-8 lg:pl-12 xl:pl-18">
+          <ul data-reveal="left" className="min-w-0 space-y-8 lg:pl-12 xl:pl-18">
             {details.map((detail) => {
               const Icon = detail.icon;
               return (
@@ -108,7 +108,7 @@ export default function Contact() {
             </li>
           </ul>
 
-          <div className="relative flex justify-center lg:block">
+          <div data-reveal="right" className="relative flex justify-center lg:block">
             <Image
               src={images.contact}
               alt="An AOME people solutions consultant on a support call"

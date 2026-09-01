@@ -8,6 +8,7 @@ import {
   useId,
   useRef,
   useState,
+  type ComponentPropsWithoutRef,
   type ReactNode,
 } from "react";
 import { formspreeId } from "@/lib/content";
@@ -41,13 +42,11 @@ export function ContactModalProvider({ children }: { children: ReactNode }) {
 export function ContactButton({
   className,
   children,
-}: {
-  className?: string;
-  children: ReactNode;
-}) {
+  ...rest
+}: ComponentPropsWithoutRef<"button">) {
   const { open } = useContactModal();
   return (
-    <button type="button" onClick={open} className={className}>
+    <button {...rest} type="button" onClick={open} className={className}>
       {children}
     </button>
   );

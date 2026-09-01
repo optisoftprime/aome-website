@@ -34,11 +34,13 @@ export default function Industries() {
         </div>
 
         <ul className="grid grid-cols-2 gap-y-10 sm:grid-cols-3 xl:grid-cols-6 xl:border-l xl:border-gold/35">
-          {industries.map((industry) => {
+          {industries.map((industry, index) => {
             const Icon = iconMap[industry.icon];
             return (
               <li
                 key={industry.label}
+                data-reveal
+                style={{ transitionDelay: `${index * 70}ms` }}
                 className="flex flex-col items-center gap-4 px-3 text-center xl:border-r xl:border-gold/35 xl:last:border-r-0"
               >
                 <Icon className="h-9 w-9 text-gold" />

@@ -12,7 +12,7 @@ export default function WhyChooseUs() {
   return (
     <section id="why-us" className="bg-white py-20 lg:py-24">
       <div className="container-page">
-        <div className="text-center">
+        <div data-reveal className="text-center">
           <h2 className="section-title">Why Choose Us</h2>
           <p className="section-sub mt-2">
             We don&apos;t just fill roles - We build people and stronger Organizations
@@ -20,11 +20,13 @@ export default function WhyChooseUs() {
         </div>
 
         <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {reasons.map((reason) => {
+          {reasons.map((reason, index) => {
             const Icon = iconMap[reason.icon];
             return (
               <li
                 key={reason.title}
+                data-reveal
+                style={{ transitionDelay: `${index * 80}ms` }}
                 className="flex flex-col items-center rounded-xl bg-cream-card px-8 pb-9 pt-9 text-center"
               >
                 <Icon className="h-10 w-10 text-gold" />

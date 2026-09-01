@@ -1,5 +1,6 @@
 import About from "@/components/About";
 import { ContactModalProvider } from "@/components/ContactModal";
+import ScrollReveal from "@/components/ScrollReveal";
 import Contact from "@/components/Contact";
 import CtaBand from "@/components/CtaBand";
 import Footer from "@/components/Footer";
@@ -13,6 +14,7 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 export default function Home() {
   return (
     <ContactModalProvider>
+      <ScrollReveal />
       <Header />
       <main className="flex-1">
         <Hero />

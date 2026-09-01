@@ -124,3 +124,24 @@ shows "This form is not connected yet" rather than posting to a dead endpoint:
 3. Restart the dev server. Formspree emails the first submission to you for confirmation.
 
 The form includes a `_gotcha` honeypot field, which Formspree uses to drop bot submissions.
+
+## Scroll animations
+
+Anything carrying a `data-reveal` attribute fades and lifts into place the first time it
+scrolls into view. [ScrollReveal.tsx](src/components/ScrollReveal.tsx) mounts once in
+[page.tsx](src/app/page.tsx), finds every `[data-reveal]`, and adds `.is-visible` via an
+IntersectionObserver - it adds no wrapper elements, so grid and flex layouts are untouched.
+
+- `data-reveal` - lift up (default)
+- `data-reveal="left"` / `data-reveal="right"` - slide in sideways
+- `data-reveal="fade"` - opacity only
+- Stagger a list by giving each item an inline `transitionDelay` based on its index
+
+The hidden state is defined in [globals.css](src/app/globals.css) behind
+`prefers-reduced-motion: no-preference`, so anyone who asks for reduced motion sees the page
+fully rendered with no movement. A `<noscript>` rule in [layout.tsx](src/app/layout.tsx)
+does the same when JavaScript is unavailable.
+
+**Sideways reveals start off-position**, so any band containing one needs `overflow-hidden`
+or the transform causes horizontal page scroll. About Us, Contact Us, and the CTA band
+already have it.

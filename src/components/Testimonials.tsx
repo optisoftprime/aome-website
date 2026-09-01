@@ -36,18 +36,20 @@ export default function Testimonials() {
   return (
     <section className="bg-white py-20 lg:py-24">
       <div className="container-page">
-        <div className="text-center">
+        <div data-reveal className="text-center">
           <h2 className="section-title">What Our Clients Say</h2>
           <p className="section-sub mt-2">Read through our client&apos;s testimonial</p>
         </div>
 
         <ul
           ref={trackRef}
-          className="mt-12 flex snap-x snap-mandatory gap-6 overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none] lg:grid lg:grid-cols-3 lg:overflow-visible [&::-webkit-scrollbar]:hidden"
+          className="no-scrollbar mt-12 flex snap-x snap-mandatory gap-6 overflow-x-auto pb-2 [-ms-overflow-style:none] lg:grid lg:grid-cols-3 lg:overflow-visible"
         >
-          {testimonials.map((item) => (
+          {testimonials.map((item, index) => (
             <li
               key={item.name}
+              data-reveal
+              style={{ transitionDelay: `${index * 90}ms` }}
               className="flex w-[85%] shrink-0 snap-start flex-col rounded-xl bg-cream-card px-8 py-8 sm:w-[60%] lg:w-auto"
             >
               <QuoteIcon className="h-7 w-7 text-gold" />
