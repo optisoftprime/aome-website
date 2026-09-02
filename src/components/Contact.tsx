@@ -112,8 +112,8 @@ export default function Contact() {
             <Image
               src={images.contact}
               alt="An AOME people solutions consultant on a support call"
-              width={1528}
-              height={1374}
+              width={1400}
+              height={1259}
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="h-auto w-full max-w-[420px] object-contain sm:max-w-[520px] lg:ml-auto lg:max-w-[820px]"
             />

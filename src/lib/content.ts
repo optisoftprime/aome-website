@@ -11,7 +11,7 @@ export const formspreeId = process.env.NEXT_PUBLIC_FORMSPREE_ID ?? "YOUR_FORM_ID
 
 export const site = {
   name: "AOME People Solutions",
-  logo: "/images/logo.png",
+  logo: "/images/logo.webp",
   email: "azeezat@aomepeoplesolutions.com",
   emailAlt: "sales@aomepeoplesolution.com",
   phone: "+2349018239707",
@@ -20,10 +20,10 @@ export const site = {
 };
 
 export const images = {
-  hero: "/images/heroimg.png",
-  heroBg: "/images/herobg.png",
-  about: "/images/aboutimg.png",
-  contact: "/images/contactimg.png",
+  hero: "/images/heroimg.webp",
+  heroBg: "/images/herobg.webp",
+  about: "/images/aboutimg.webp",
+  contact: "/images/contactimg.webp",
 };
 
 export const navLinks = [
@@ -100,21 +100,21 @@ export const testimonials = [
       "AOME people's solution transformed our HR approach and helped us build a more engaged and productive team.",
     name: "Sarah Okagbulor",
     role: "HR Manager, Financial Services",
-    avatar: "/images/avatar1.png",
+    avatar: "/images/avatar1.webp",
   },
   {
     quote:
       "Their talent development programmes have significantly improved the skills and confidence of our workforce.",
     name: "Emeka Anya",
     role: "Operations Director, Tech Company",
-    avatar: "/images/avatar2.png",
+    avatar: "/images/avatar2.webp",
   },
   {
     quote:
       "AOME people's solution transformed our HR approach and helped us build a more engaged and productive team.",
     name: "Chidinma Eze",
     role: "CEO, Health Care Organization",
-    avatar: "/images/avatar3.png",
+    avatar: "/images/avatar3.webp",
   },
 ];
 

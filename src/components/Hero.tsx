@@ -56,8 +56,8 @@ export default function Hero() {
           <Image
             src={images.hero}
             alt="The AOME People Solutions advisory team"
-            width={2062}
-            height={2000}
+            width={1600}
+            height={1552}
             priority
             sizes="(max-width: 1024px) 100vw, 52vw"
             className="h-auto w-full max-w-[520px] object-contain object-bottom lg:h-full lg:max-w-none lg:object-right-bottom"
