@@ -35,7 +35,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-line/70">
       <div className="container-page flex h-[72px] items-center justify-between gap-4 sm:h-20">
         <a href="#home" className="flex shrink-0 items-center" aria-label={site.name}>
-          <Image src={site.logo} alt={site.name} width={220} height={220} priority className="h-12 w-12 object-contain sm:h-14 sm:w-14" />
+          <Image src={site.logo} alt={site.name} width={220} height={220} priority className="h-14 w-14 object-contain sm:h-16 sm:w-16" />
         </a>
 
         <nav className="hidden items-center gap-10 md:flex" aria-label="Primary">
